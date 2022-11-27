@@ -60,10 +60,10 @@ html, body{
   margin-left: 1.8vw;
 }
 #fb-sim-ckt{
-  /* height: 450px;
-  width: 650px; */
+  height: 450px;
+  width: 550px;
   margin-top: 200px;
-  margin-left: 7vw;
+  margin-left: 5vw;
   position: relative;
 }
 #sim-header,#sim-control-header,#plot-header{
@@ -170,7 +170,6 @@ html, body{
   width: 5vw;
   text-align: center;
   border-radius: 50px;
-  margin-left: 18vw;
   
   position: relative;
 }
@@ -184,11 +183,11 @@ html, body{
 }
 #dc-disp{
   margin-top: -7vw;
-  margin-left: 7vw;
+  margin-left: 22vw;
 }
 #rl-disp{
-  margin-top: -23vw;
-  margin-left: -26vw;
+  margin-top: -22vw;
+  margin-left: -25vw;
 }
 #source-control,#load-control{
   border: 1px solid black;
