@@ -44,7 +44,7 @@
     <div id="dc-ammeter">
         <p id="ammeter-title">DC AMMETER</p>
         <div id="ammeter-disp">
-            <a id="am-disp"><input id="am-value" value="0" type="text" value id="am" readonly=""></a>
+            <a id="am-disp"><input id="am-value" value="0" type="text" readonly=""></a>
             <div id="po-term"></div>
             <div id="ne-term"></div>
         </div>
@@ -52,7 +52,7 @@
     <div id="dc-voltmeter">
         <p id="Voltmeter-title">DC VOLTMETER</p>
         <div id="voltmeter-disp">
-            <a id="vm-disp"><input id="vm-value" value="0" type="text" value id="vm" readonly=""></a>
+            <a id="vm-disp"><input id="vm-value" value="0" type="text" readonly=""></a>
             <div id="p-term"></div>
             <div id="n-term"></div>
         </div>
@@ -72,7 +72,7 @@
             <div id="source-control">
                 <h4>DC SOURCE:</H4>
                 <div class="source-slider">
-                    <input type="range" min="-5" max="5" value="0" step="0.05" class="slider_dc" id="dc-slider" oninput="dcsliderChange()">
+                    <input type="range" min="-5" max="5" value="0" step="0.01" class="slider_dc" id="dc-slider" oninput="dcsliderChange()">
                 </div>
             </div>
             <div id="load-control">
@@ -84,7 +84,7 @@
             <div id="temp-control">
                 <h4>TEMPERATURE:</h4>
                 <div class="temp-slider">
-                    <input type="range" min="26" max="100" value="0" step="0.05" class="slider_temp" id="tp-slider" oninput="tpsliderChange()">
+                    <input type="range" min="26" max="100" value="0" step="0.01" class="slider_temp" id="tp-slider" oninput="tpsliderChange()">
                 </div>
             </div>
         </div>
