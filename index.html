@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="node_modules\jsplumb\css\jsplumbtoolkit-defaults.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="js\script.js"></script>
     <title>Expt 1</title>
 </head>
 <body>
@@ -32,11 +33,62 @@
     <div id="sim-cont">
         <div id="sim-header">
             <h2 id="sim-head-text">FORWARD BIAS SIMULATOR</h2>
-        </div>
+            <div id="temp-cont-disp">
+                <a id="temp-disp"><input id="temp-value" type="text" min="26" max="100" step="1" value="26" oninput="txtchng()" readonly=""></a>
+                <p>TEMP IN °C</p>  
+            </div>
+        </div>    
+        
         <img src="src\Fbias_ckt.png" class="d-block-w-100" alt="Image" id="fb-sim-ckt">
     </div>
+    <div id="dc-ammeter">
+        <p id="ammeter-title">DC AMMETER</p>
+        <div id="ammeter-disp">
+            <a id="am-disp"><input id="am-value" value="0" type="text" value id="am" readonly=""></a>
+            <div id="po-term"></div>
+            <div id="ne-term"></div>
+        </div>
+    </div>
+    <div id="dc-voltmeter">
+        <p id="Voltmeter-title">DC VOLTMETER</p>
+        <div id="voltmeter-disp">
+            <a id="vm-disp"><input id="vm-value" value="0" type="text" value id="vm" readonly=""></a>
+            <div id="p-term"></div>
+            <div id="n-term"></div>
+        </div>
+    </div>
     <a id="dc-disp"><input id="dc-value" type="text" min="-5" max="5" step="0.05" value="0" oninput="txtchng()" readonly=""></a>
-<a id="rl-disp"><input id="rl-value" type="text" min="100" max="1000" step="1" value="100" oninput="txtchng()" readonly=""></a>
+    <a id="rl-disp"><input id="rl-value" type="text" min="100" max="1000" step="1" value="100" oninput="txtchng()" readonly=""></a>
+    <!-------------CONTROL PANEL------------->
+    <div id="sim-control">
+        <div id="sim-control-header">
+            <h2 id="sim-control-head-text">CONTROL PANEL</h2>
+            <div id="control-buttons">
+                <button id="switch-btn" type="button" class="btn btn-primary">SWITCH SIMULATOR</button>
+                <button id="switch-btn" type="button" class="btn btn-primary">SIMULATE</button>
+                <button id="switch-btn" type="button" class="btn btn-primary">PLOT</button>
+                <button id="switch-btn" type="button" class="btn btn-primary">RESET SIMULATOR</button>
+            </div>
+            <div id="source-control">
+                <h4>DC SOURCE:</H4>
+                <div class="source-slider">
+                    <input type="range" min="-5" max="5" value="0" step="0.05" class="slider_dc" id="dc-slider" oninput="dcsliderChange()">
+                </div>
+            </div>
+            <div id="load-control">
+                <h4>LOAD RESISTANCE:</H4>
+                <div class="load-slider">
+                    <input type="range" min="100" max="1000" value="0" step="1" class="slider_load" id="rl-slider" oninput="rlsliderChange()">
+                </div>
+            </div>
+            <div id="temp-control">
+                <h4>TEMPERATURE:</h4>
+                <div class="temp-slider">
+                    <input type="range" min="26" max="100" value="0" step="0.05" class="slider_temp" id="tp-slider" oninput="tpsliderChange()">
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>
