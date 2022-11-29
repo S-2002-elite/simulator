@@ -57,6 +57,81 @@ function fbias(){
   }
   else {
     document.getElementById("am-value").value = id.toPrecision(3);//in MICROAMPERE
-    document.getElementById("vm-value").value = irev.toPrecision(3);//in VOLTS
+    document.getElementById("vm-value").value = vd.toPrecision(3);//in VOLTS
   }
+}
+// --------------------TABULATION--------------------
+var tabrowindex1 = 0;
+var arr1 = [];
+var table1;
+var dcvolt1;
+var columns1;
+
+var tabrowindex = 0;
+var arr = [];
+var table;
+var dcvolt;
+var columns;
+
+function obstable() {
+  table = document.getElementById("obs-table");
+  arr[0] = tabrowindex + 1;
+  arr[1] = document.getElementById("vm-value").value;
+  arr[2] = document.getElementById("am-value").value;
+
+  if (document.getElementById("dc-value").value == "") {
+    alert("Enter the DC Source Voltage");
+  }
+  else if(document.getElementById("rl-value").value == "") {
+    alert("Enter the Load Resistance Value");
+  }
+  else if (dcvolt == document.getElementById("dc-value").value) {
+    alert("Vary the DC Source Voltage");
+  }
+  else if (table.rows.length <= 40) {
+
+      var row = table.insertRow(++tabrowindex);
+      for (var a = 0; a < 3; a++) {
+      var cell = row.insertCell(a);
+      cell.innerHTML = arr[a];
+    }
+  }
+  columns = table.rows[tabrowindex].cells[1];
+  dcvolt = columns.innerHTML;
+}
+
+function obstable1() {
+  table1 = document.getElementById("obs-1-table");
+  arr1[0] = tabrowindex1 + 1;
+  arr1[1] = document.getElementById("vm-value").value;
+  arr1[2] = document.getElementById("am-value").value;
+
+  if (document.getElementById("dc-value").value == "") {
+    alert("Enter the DC Source Voltage");
+  }
+  else if(document.getElementById("rl-value").value == "") {
+    alert("Enter the Load Resistance Value");
+  }
+  else if (dcvolt1 == document.getElementById("dc-value").value) {
+    alert("Vary the DC Source Voltage");
+  }
+  else if (table1.rows.length <= 40) {
+
+      var row1 = table1.insertRow(++tabrowindex1);
+      for (var b = 0; b < 3; b++) {
+      var cell1 = row1.insertCell(b);
+      cell1.innerHTML = arr1[b];
+    }
+  }
+  columns1 = table1.rows[tabrowindex1].cells[1];
+  dcvolt1 = columns1.innerHTML;
+}
+// --------------------CHANGE TEMPERATURE--------------------
+function chngtemp() {
+  document.getElementById("control-buttons").style.display = "none";
+  document.getElementById("control-buttons-1").style.display = "block";
+  document.getElementById("dc-slider").value = "";
+  document.getElementById("rl-slider").value = "100";
+  document.getElementById("dc-value").value = "";
+  document.getElementById("rl-value").value = "";
 }

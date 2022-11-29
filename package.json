@@ -1,5 +1,8 @@
 {
   "dependencies": {
+    "canvasjs": "^1.8.3",
+    "jqplot": "^1.0.9",
+    "jquery": "^3.6.1",
     "jsplumb": "^2.15.6"
   }
 }

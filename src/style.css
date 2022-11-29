@@ -85,7 +85,7 @@ html, body{
   height: 5.58vw;
   background: whitesmoke;
 }
-#sim-head-text,#sim-control-head-text,#plot-head-text{
+#sim-head-text,#sim-control-head-text,#plot-head-text,#table-head-text,#table-1-head-text{
   text-align: center;
 }
 #sim-control{
@@ -97,14 +97,24 @@ html, body{
   margin-left: 1.7vw;
 
 }
-#switch-btn{
+#switch-btn,#simulate-btn{
   margin-top: 1.62vw;
   margin-right: 0.66vw;
+}
+#simulate-btn-1{
+  margin-top: 1.62vw;
+  margin-right: 0.66vw;
+  display: none;
+  margin-top: -2.5vw !important;
+  margin-left: 30vw;
 }
 #control-buttons{
   text-align: center;
 }
-
+#control-buttons-1{
+  text-align: center;
+  display: none;
+}
 .source-slider,.load-slider,.temp-slider{
   width: 70%;
   margin-top: -2vw;
@@ -376,6 +386,116 @@ html, body{
   position: relative;
   margin-left: 6vw;
   margin-top: -1vw;
+}
+/*---------------------------------Tabulation---------------------------------*/
+#tabulation-div{
+  display: flex;
+  padding: 0.66vw;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  margin: 1.30vw 0;
+  border-width: 0.130vw;
+  border: 0.33vw solid;
+  border-color: lightgrey;
+  height: 30.8vw;
+  width: 45vw;
+  margin-left: 54vw;
+  margin-top: -64.2vw;
+}
+#table-header{
+  border:0.130vw solid;
+  border-color: lightgrey;
+  height: 3vw;
+  width: 100vw;
+  background: whitesmoke;
+}
+#obs-table{
+  border: 0.066vw solid black;
+  width: 43vw;
+  border-collapse: separate;
+  border-spacing: 0.130vw;
+}
+#obs-table th{
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: bold;
+    text-align: center;
+    border: 0.066vw solid black;
+}
+#obs-table tr{
+    display: table-row;
+    vertical-align: middle;
+     
+}
+#obs-table td{
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: bold;
+    text-align: center;
+    border: 0.066vw solid black;
+}
+#table-1{
+  background-color: whitesmoke;
+  height: 24.8vw;
+  width: 43vw;
+  overflow-y: auto;
+  margin-top: 1vw;
+  border: 0.066vw solid black;
+  
+}
+#tabulation-1-div{
+  display: flex;
+  padding: 0.66vw;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  margin: 1.30vw 0;
+  border-width: 0.130vw;
+  border: 0.33vw solid;
+  border-color: lightgrey;
+  height: 30.8vw;
+  width: 45vw;
+  margin-left: 54vw;
+  margin-top: 0vw;
+}
+#table-1-header{
+  border:0.130vw solid;
+  border-color: lightgrey;
+  height: 3vw;
+  width: 100vw;
+  background: whitesmoke;
+}
+#table-2{
+  background-color: whitesmoke;
+  height: 24.8vw;
+  width: 43vw;
+  overflow-y: auto;
+  margin-top: 1vw;
+  border: 0.066vw solid black;
+}
+#obs-1-table{
+  border: 0.066vw solid black;
+  width: 43vw;
+  border-collapse: separate;
+  border-spacing: 0.130vw;
+}
+#obs-1-table th{
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: bold;
+    text-align: center;
+    border: 0.066vw solid black;
+}
+#obs-1-table tr{
+    display: table-row;
+    vertical-align: middle;
+     
+}
+#obs-1-table td{
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: bold;
+    text-align: center;
+    border: 0.066vw solid black;
 }
 @media(max-width:991px){
   #plot{
