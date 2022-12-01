@@ -90,7 +90,7 @@
             <div id="control-buttons-1">
                 <button id="switch-btn" type="button" class="btn btn-primary" onclick="chngtemp()">CHANGE TEMPERATURE</button>
                 <button id="simulate-btn" type="button" class="btn btn-primary" value="Add to Table" onclick="obstable1()">SIMULATE</button>
-                <button id="switch-btn" type="button" class="btn btn-primary">PLOT</button>
+                <button id="switch-btn" type="button" class="btn btn-primary" onclick="plotting1()">PLOT</button>
                 <button id="switch-btn" type="button" class="btn btn-primary">RESET SIMULATOR</button>
             </div>
             <div id="source-control">
@@ -117,7 +117,7 @@
 <!-------------TABULATION PANEL------------->
 <div id="tabulation-div">
     <div id="table-header">
-        <h2 id="table-head-text">TABULATION</h2>
+        <h2 id="table-head-text">TABULATION 1</h2>
     </div>
     <div id="table-1">
         <table id="obs-table">
@@ -133,7 +133,7 @@
 </div>
 <div id="tabulation-1-div">
     <div id="table-1-header">
-        <h2 id="table-1-head-text">TABULATION</h2>
+        <h2 id="table-1-head-text">TABULATION 2</h2>
     </div>
     <div id="table-2">
         <table id="obs-1-table">
@@ -150,9 +150,17 @@
 <!-------------TABULATION PANEL------------->
 <figure class="highcharts-figure">
     <div id="plotting-header">
-        <h2 id="plotting-head-text">PLOTTING</h2>
+        <h2 id="plotting-head-text">PLOT AREA FOR TABULATION 1</h2>
     </div>
     <div id="vi-plot">
+
+    </div>
+</figure>
+<figure class="highcharts-figure-1">
+    <div id="plotting-header-1">
+        <h2 id="plotting-head-text-1">PLOT AREA FOR TABULATION 2</h2>
+    </div>
+    <div id="vi-plot-1">
 
     </div>
 </figure>

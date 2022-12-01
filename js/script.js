@@ -188,3 +188,36 @@ function plotting() {
     }
   });
 }
+
+function plotting1() {
+  Highcharts.chart("vi-plot-1", {
+    data: {
+      table: "obs-1-table",
+      startRow: 1,
+      startColumn: 1,
+      endColumn: 2
+    },
+    chart: {
+      type: "spline"
+    },
+    title: {
+      text: "V-I CHARACTERISTICS OF A DIODE IN A FORWARD BIAS CONDITION AT INCREASED TEMPERATURE"
+    },
+    yAxis: {
+      title: {
+        text: "Forward Current in mAmp"
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    xAxis: {
+      title: {
+        text: "Forward Voltage in Volts"
+      }
+    },
+    tooltip: {
+      pointFormat: "{point.x}<b>{point.y}</b>"
+    }
+  });
+}
