@@ -15,13 +15,24 @@
     <link rel="stylesheet" href="node_modules\jsplumb\css\jsplumbtoolkit-defaults.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script src="node_modules\canvasjs\dist\canvasjs.min.js"></script>
+    <script type="text/javascript" src="node_modules\canvasjs\dist\canvasjs.min.js"></script>
     <script class="include" type="text/javascript" src="node_modules\jquery\dist\jquery.min.js"></script>
     <script class="include" type="text/javascript" src="node_modules\jqplot\jquery.jqplot.min.js"></script>
     <script type="text/javascript" src="js\shCore.min.js"></script>
     <script type="text/javascript" src="js\shBrushJScript.min.js"></script>
     <script type="text/javascript" src="js\shBrushXml.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.min.js" integrity="sha512-tQYZBKe34uzoeOjY9jr3MX7R/mo7n25vnqbnrkskGr4D6YOoPYSpyafUAzQVjV6xAozAqUFIEFsCO4z8mnVBXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script class="include" type="text/javascript" src="node_modules\jqplot\jqplot.meterGaugeRenderer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
     <script src="js\script.js"></script>
     <title>Expt 1</title>
 </head>
@@ -73,7 +84,7 @@
             <div id="control-buttons">
                 <button id="switch-btn" type="button" class="btn btn-primary" onclick="chngtemp()">CHANGE TEMPERATURE</button>
                 <button id="simulate-btn" type="button" class="btn btn-primary" value="Add to Table" onclick="obstable()">SIMULATE</button>
-                <button id="switch-btn" type="button" class="btn btn-primary">PLOT</button>
+                <button id="switch-btn" type="button" class="btn btn-primary" onclick="plotting()">PLOT</button>
                 <button id="switch-btn" type="button" class="btn btn-primary">RESET SIMULATOR</button>
             </div>
             <div id="control-buttons-1">
@@ -136,5 +147,14 @@
         </table>
     </div>
 </div>
+<!-------------TABULATION PANEL------------->
+<figure class="highcharts-figure">
+    <div id="plotting-header">
+        <h2 id="plotting-head-text">PLOTTING</h2>
+    </div>
+    <div id="vi-plot">
+
+    </div>
+</figure>
 </body>
 </html>

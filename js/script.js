@@ -66,6 +66,8 @@ var arr1 = [];
 var table1;
 var dcvolt1;
 var columns1;
+var dataPoints = [];
+var p2;
 
 var tabrowindex = 0;
 var arr = [];
@@ -134,4 +136,55 @@ function chngtemp() {
   document.getElementById("rl-slider").value = "100";
   document.getElementById("dc-value").value = "";
   document.getElementById("rl-value").value = "";
+}
+// --------------------PLOTTING--------------------
+// function plotting() {
+//   for (var tabrowindex = 1; tabrowindex < table.rows.length; tabrowindex++) {
+//     var p1 = table.rows[tabrowindex].cells;
+
+//     dataPoints.push({x: parseFloat(p1[1].innerHTML), y: parseFloat(p1[2].innerHTML)});
+//   }
+
+//   p2 = new CanvasJS.Chart("vi-plot", {
+//     theme: "theme1",
+//     title: {text: "V-I CHARACTERISTICS OF A DIODE"},
+//     legend: {verticalAlign: "bottom", horizontalAlign: "center"},
+//     axisX: {title: "Voltage (V)", minimum:0, maximum:2},
+//     axisY: {title:"Current (mAmp)"},
+//     data: [{type: "line", dataPoints: dataPoints}]
+//   });
+//   p2.render();
+// }
+
+function plotting() {
+  Highcharts.chart("vi-plot", {
+    data: {
+      table: "obs-table",
+      startRow: 1,
+      startColumn: 1,
+      endColumn: 2
+    },
+    chart: {
+      type: "spline"
+    },
+    title: {
+      text: "V-I CHARACTERISTICS OF A DIODE IN A FORWARD BIAS CONDITION"
+    },
+    yAxis: {
+      title: {
+        text: "Forward Current in mAmp"
+      }
+    },
+    legend: {
+      enabled: false
+    },
+    xAxis: {
+      title: {
+        text: "Forward Voltage in Volts"
+      }
+    },
+    tooltip: {
+      pointFormat: "{point.x}<b>{point.y}</b>"
+    }
+  });
 }
