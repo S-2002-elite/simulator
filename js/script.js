@@ -187,6 +187,7 @@ function plotting() {
       pointFormat: "{point.x}<b>{point.y}</b>"
     }
   });
+  alert("Graph Plotted Successfully");
   document.getElementById("rev-btn").style.display = "block";
 }
 
@@ -221,5 +222,6 @@ function plotting1() {
       pointFormat: "{point.x}<b>{point.y}</b>"
     }
   });
+  alert("Graph Plotted Successfully");
   document.getElementById("rev-btn").style.display = "block";
 }
