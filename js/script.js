@@ -214,6 +214,7 @@ function plotting1() {
       enabled: false
     },
     xAxis: {
+      
       title: {
         text: "Forward Voltage in Volts"
       }
